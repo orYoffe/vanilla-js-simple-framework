@@ -65,7 +65,10 @@ export async function render() {
         >
           Todos
         </a>
-        <a target="_blank" href="https://github.com/orYoffe">
+        <a
+          target="_blank"
+          href="https://github.com/orYoffe/vanilla-js-simple-framework"
+        >
           Github repo 🔗
         </a>
       </nav>

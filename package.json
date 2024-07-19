@@ -5,8 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open",
-    "build": "tsc && vite build --outDir ./docs",
+    "build": "tsc && vite build --outDir ./docs --base https://oryoffe.github.io/vanilla-js-simple-framework/",
     "preview": "vite preview --outDir ./docs"
+  },
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/orYoffe/vanilla-js-simple-framework"
   },
   "devDependencies": {
     "typescript": "^5.2.2",
