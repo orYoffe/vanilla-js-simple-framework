@@ -1,8 +1,6 @@
 import "./style.css";
 
 import { h } from "dom-chef";
-import { Counter } from "./counter";
-import { Todos } from "./todos";
 
 // fix for JSX class attribute
 declare global {
