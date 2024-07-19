@@ -9,7 +9,6 @@
     "preview": "vite preview --outDir ./docs"
   },
   "devDependencies": {
-    "@types/uuid": "^10.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
   },
