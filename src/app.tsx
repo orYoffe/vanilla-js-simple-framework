@@ -2,6 +2,8 @@ import "./style.css";
 
 import { h } from "dom-chef";
 
+const BASE_URI = "/vanilla-js-simple-framework";
+
 // fix for JSX class attribute
 declare global {
   namespace React {
@@ -21,7 +23,7 @@ document.addEventListener("click", function (e) {
   }
 });
 function navigateTo(path: string) {
-  window.history.replaceState({}, "", path);
+  window.history.replaceState({}, "", BASE_URI + path);
   render();
 }
 
