@@ -3,6 +3,8 @@ import "./style.css";
 import { h } from "dom-chef";
 
 const BASE_URI = "/vanilla-js-simple-framework";
+const TODOS_PATH = BASE_URI + "/todos";
+const COUNTER_PATH = BASE_URI + "/counter";
 
 // fix for JSX class attribute
 declare global {
@@ -23,17 +25,17 @@ document.addEventListener("click", function (e) {
   }
 });
 function navigateTo(path: string) {
-  window.history.replaceState({}, "", BASE_URI + path);
+  window.history.replaceState({}, "", path);
   render();
 }
 
 export async function render() {
   let Page: () => JSX.Element;
   switch (window.location.pathname) {
-    case "/todos":
+    case TODOS_PATH:
       Page = await import("./todos").then(({ Todos }) => Todos);
       break;
-    case "/counter":
+    case COUNTER_PATH:
       Page = await import("./counter").then(({ Counter }) => Counter);
       break;
     default:
@@ -52,7 +54,7 @@ export async function render() {
         <a
           href="/counter"
           onClick={() => {
-            navigateTo("/counter");
+            navigateTo(COUNTER_PATH);
             return false;
           }}
         >
@@ -61,7 +63,7 @@ export async function render() {
         <a
           href="/todos"
           onClick={() => {
-            navigateTo("/todos");
+            navigateTo(TODOS_PATH);
             return false;
           }}
         >
