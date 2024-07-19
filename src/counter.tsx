@@ -2,7 +2,7 @@ import { h } from "dom-chef";
 import { wrapWithId, update, state } from "./state.tsx";
 
 const { state: count, id: stateId } = state({ counter: 0 });
-console.log("----count--------stateId------------", stateId);
+
 function increment() {
   count.setState((state: typeof count.state) => ({
     counter: ++state.counter,
